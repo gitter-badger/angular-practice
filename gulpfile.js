@@ -177,7 +177,7 @@ gulp.task('deploy', function() {
     var conn = ftp.create( {
         host:     'bipins.net',
         user:     'gulpuser',
-        password: '#GemsUser1',
+        password: '',
         parallel: 1,
         log: gutil.log
     } );
