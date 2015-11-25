@@ -175,8 +175,8 @@ gulp.task('build', function () {
 
 gulp.task('deploy', function() {
     var conn = ftp.create( {
-        host:     'bipins.net',
-        user:     'gulpuser',
+        host:     '',
+        user:     '',
         password: '',
         parallel: 1,
         log: gutil.log
