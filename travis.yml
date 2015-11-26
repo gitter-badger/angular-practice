@@ -1,6 +1,0 @@
-install:
-  - npm install
-  - bower install
-before_script:
-  - npm install -g gulp
-script: gulp test
