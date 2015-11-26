@@ -1,4 +1,5 @@
-https://travis-ci.org/bipindra/angular-practice.svg?branch=master
+
+![alt tag](https://travis-ci.org/bipindra/angular-practice.svg?branch=master)
 
 
 # Leptir - the seed for professional AngularJS apps
