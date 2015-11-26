@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     autoPrefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence'),
     ftp = require( 'vinyl-ftp' ),
-    transform = require('vinyl-transform');
+    transform = require('vinyl-transform'),
+    Server = require('karma').Server;
 
 var express = require('express'),
     refresh = require('gulp-livereload'),
@@ -173,14 +174,17 @@ gulp.task('build', function () {
     );
 });
 
-gulp.task('deploy', function() {
-    var conn = ftp.create( {
-        host:     '',
-        user:     '',
-        password: '',
-        parallel: 1,
-        log: gutil.log
-    } );
+gulp.task('deploy', ['build'],function() {
+    //var config = {
+    //    host:     '',
+    //    user:     '',
+    //    password: '',
+    //    parallel: 1,
+    //    log: gutil.log
+    //};
+    var config = require("..\\config\\angular-practice.config");
+
+    var conn = ftp.create( config );
 
     var globs = [
         'dist/**'
@@ -190,3 +194,15 @@ gulp.task('deploy', function() {
         .pipe(conn.newer('/')) // only upload newer files
         .pipe(conn.dest('/'));
 } );
+
+
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
+});
