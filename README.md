@@ -1,3 +1,6 @@
+https://travis-ci.org/bipindra/angular-practice.svg?branch=master
+
+
 # Leptir - the seed for professional AngularJS apps
 
 Leptir means in croatian language Butterfly.
