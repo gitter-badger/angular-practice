@@ -4,6 +4,8 @@
 
 # Leptir - the seed for professional AngularJS apps
 
+[![Join the chat at https://gitter.im/bipindra/angular-practice](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bipindra/angular-practice?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Leptir means in croatian language Butterfly.
 
 `AngularJS, Gulp, Browserify, Angular-UI, Angular-Translate, Bootstrap, SCSS, Karma & Jasmine & ftp deployment out of the box.`
